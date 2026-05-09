@@ -1,0 +1,12 @@
+{
+  "name": "Qur'an Weekly Khatm Planner",
+  "short_name": "Khatm Planner",
+  "description": "Complete the Qur'an every 7 days using the Manzil division.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfcfd",
+  "theme_color": "#1f3b5c",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
