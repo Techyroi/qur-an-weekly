@@ -14,7 +14,126 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      plan_progress: {
+        Row: {
+          completed: boolean
+          completed_at: string | null
+          created_at: string
+          day_number: number
+          end_surah: string
+          estimated_pages: number
+          id: string
+          notes: string
+          plan_type: string
+          start_surah: string
+          title: string
+          user_id: string
+        }
+        Insert: {
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          day_number: number
+          end_surah: string
+          estimated_pages?: number
+          id?: string
+          notes?: string
+          plan_type: string
+          start_surah: string
+          title: string
+          user_id: string
+        }
+        Update: {
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          day_number?: number
+          end_surah?: string
+          estimated_pages?: number
+          id?: string
+          notes?: string
+          plan_type?: string
+          start_surah?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          cycle_start: string
+          email: string | null
+          full_name: string | null
+          id: string
+          language: string
+          mushaf: string | null
+          onboarded: boolean
+          reminder_enabled: boolean
+          reminder_time: string
+          selected_plan: string | null
+          theme: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          cycle_start?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+          language?: string
+          mushaf?: string | null
+          onboarded?: boolean
+          reminder_enabled?: boolean
+          reminder_time?: string
+          selected_plan?: string | null
+          theme?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          cycle_start?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          language?: string
+          mushaf?: string | null
+          onboarded?: boolean
+          reminder_enabled?: boolean
+          reminder_time?: string
+          selected_plan?: string | null
+          theme?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_stats: {
+        Row: {
+          current_streak: number
+          cycles_completed: number
+          last_completion_date: string | null
+          longest_streak: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          current_streak?: number
+          cycles_completed?: number
+          last_completion_date?: string | null
+          longest_streak?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          current_streak?: number
+          cycles_completed?: number
+          last_completion_date?: string | null
+          longest_streak?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
